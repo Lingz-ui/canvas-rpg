@@ -1,0 +1,38 @@
+{
+  "name": "canvas-rpg",
+  "version": "1.0.0",
+  "description": "hello world（＞////＜）",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lingz-ui/canvas-rpg.git"
+  },
+  "keywords": [
+    "canvas",
+    "canvas discord",
+    "canvas-discord",
+    "discord-canvas",
+    "discord canvas",
+    "djs",
+    "djs bot",
+    "bot discord",
+    "discord",
+    "html5",
+    "discord js",
+    "herokuapp",
+    "knights canvas",
+    "squad 404",
+    "RPG-WABOT",
+    "RPG-BOT"
+  ],
+  "author": "Lingz-ui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lingz-ui/canvas-rpg/issues"
+  },
+  "homepage": "https://github.com/Lingz-ui/canvas-rpg#readme",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "moment": "^2.29.1"
+  }
+}
