@@ -58,7 +58,6 @@ let canvas = Canvas.createCanvas(3840, 1650);
 let ctx = canvas.getContext("2d");
 
 this.bg_anime = bgs[Math.floor(Math.random() * bgs.length)];
-znumbers = PhoneNumber('+' + this.number.split('@')[0]).getNumber('international')
 
 let avatar = await Canvas.loadImage(shorts(this.avatar));
 ctx.drawImage(avatar, 0, 0, 1650, 1650);
@@ -69,6 +68,7 @@ ctx.drawImage(bg, 0, 0, 3840, 1650);
 let fm = await Canvas.loadImage(this.fm);
 ctx.drawImage(fm, 0, 0, 3840, 1650);
 
+let znumbers = PhoneNumber('+' + this.number.split('@')[0]).getNumber('international')
 let datess = znumbers
 ctx.fillStyle = "#e0e0e0";
 let dates = datess.length > 19 ? datess.substring(0, 18) + " " : datess;
