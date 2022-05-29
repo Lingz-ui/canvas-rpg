@@ -34,11 +34,6 @@ this.avatar = value;
 return this;
 }
 
-setBio(value) {
-this.bio = value;
-return this;
-}
-
 setName(value) {
 this.name = value;
 return this;
@@ -54,19 +49,19 @@ async toAttachment() {
 
 
 // Create canvas
-let canvas = Canvas.createCanvas(3840, 1650);
+let canvas = Canvas.createCanvas(1280, 550);
 let ctx = canvas.getContext("2d");
 
 this.bg_anime = bgs[Math.floor(Math.random() * bgs.length)];
 
 let avatar = await Canvas.loadImage(shorts(this.avatar));
-ctx.drawImage(avatar, 0, 0, 1650, 1650);
+ctx.drawImage(avatar, 0, 0, 550, 550);
 
 let bg = await Canvas.loadImage(this.bg_anime);
-ctx.drawImage(bg, 0, 0, 3840, 1650);
+ctx.drawImage(bg, 0, 0, 1280, 550);
 
 let fm = await Canvas.loadImage(this.fm);
-ctx.drawImage(fm, 0, 0, 3840, 1650);
+ctx.drawImage(fm, 0, 0, 1280, 550);
 
 let znumbers = PhoneNumber('+' + this.number.split('@')[0]).getNumber('international')
 let datess = znumbers
@@ -78,43 +73,17 @@ namae = this.name
 namae = namae.replace(/"\n"/g, "");
 ctx.textAlign = 'left';
 ctx.fillStyle = "#e0e0e0";
-ctx.font = "310px NVM";
-ctx.fillText('Codename :', 2100, 290);
-if(namae.length > 16) {
-ctx.font = "240px NVM";
-ctx.fillText(namae, 2100, 490);
-ctx.font = "230px NVM";
-ctx.fillText(dates, 2100, 1000);
-} else {
-let namee = namae.length > 16 ? namae.substring(0, 16) + " " : namae;
-ctx.font = "240px NVM";
-ctx.fillText(namee, 2100, 490);
-ctx.font = "230px NVM";
-ctx.fillText(dates, 2100, 1000);
-}
+ctx.font = "90px NVM";
+ctx.fillText('Codename :', 700, 195);
+ctx.fillText('Number :', 700, 350);
+asw = namae.length > 16 ? namae.substring(0, 16) + " " : namae;
+ctx.font = "100px NVM";
+ctx.fillText(asw, 700, 255);
+ctx.font = "90px NVM";
+ctx.fillText(dates, 700, 410);
 
 
-ctx.fillStyle = "#e0e0e0";
-ctx.font = "310px NVM";
-ctx.textAlign = 'left';
-ctx.fillText("Number :", 2100, 790);
-ctx.fillText("About :", 2100, 1300);
-status = this.bio
-if(status.length > 29) {
-text1 = status.substring(0, 29) + ""
-text2 = status.substring(29, 58) + ""
-text3 = status.substring(58, 87) + ""
-ctx.font = "180px NVM";
-ctx.fillText(text1, 2100, 1400);
-ctx.fillText(text2, 2100, 1500);
-ctx.fillText(text3, 2100, 1600);
-} else {
-let satus = status.length > 22 ? status.substring(0, 22) + " " : status;
-ctx.font = "260px NVM";
-ctx.fillText(satus, 2100, 1500);
-}
-
-ctx.drawImage(fm, 0, 0, 3840, 1650);
+ctx.drawImage(fm, 0, 0, 1280, 550);
   
 
 return canvas;   
