@@ -39,7 +39,7 @@ let canvas = Canvas.createCanvas(1280, 720);
 let ctx = canvas.getContext("2d");
 let bg = await Canvas.loadImage(this.bg);
 ctx.drawImage(bg, 0, 0, 1280, 720);
-let fm = await Canvas.loadImage("https://rawcdn.githack.com/Lingz-ui/data-myBot/7d50b034740c53124dd7b3665ec79b71fb65472d/poison/goodbye.png");
+let fm = await Canvas.loadImage("https://rawcdn.githack.com/Lingz-ui/data-myBot/7d50b034740c53124dd7b3665ec79b71fb65472d/poison/welcome.png");
 ctx.drawImage(fm, 0, 0, 1280, 720);
 
 
