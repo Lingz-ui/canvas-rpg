@@ -35,20 +35,20 @@ async toAttachment() {
 
 
 // Create canvas
-let canvas = Canvas.createCanvas(2500, 1406);
+let canvas = Canvas.createCanvas(1280, 720);
 let ctx = canvas.getContext("2d");
 let bg = await Canvas.loadImage(this.bg);
-ctx.drawImage(bg, 0, 0, 2500, 1406);
-let fm = await Canvas.loadImage("https://rawcdn.githack.com/Lingz-ui/data-myBot/ae95e15b8fc49637b2259f797a802cab9d77d68d/wa-code/hosting-bot/assets/goodbye_poison.png");
-ctx.drawImage(fm, 0, 0, 2500, 1406);
+ctx.drawImage(bg, 0, 0, 1280, 720);
+let fm = await Canvas.loadImage("https://rawcdn.githack.com/Lingz-ui/data-myBot/7d50b034740c53124dd7b3665ec79b71fb65472d/poison/goodbye.png");
+ctx.drawImage(fm, 0, 0, 1280, 720);
 
 
 let namae = this.name;
 ctx.fillStyle = "#fff";
-let namee = namae.length > 16 ? namae.substring(0, 16) + "..." : namae;
-ctx.font = "210px NVM";
+let namee = namae.length > 14 ? namae.substring(0, 14) + "..." : namae;
+ctx.font = "120px NVM";
 ctx.textAlign = 'left';
-ctx.fillText(namee, 870, 1040);
+ctx.fillText(namee, 420, 540);
 
 
 var dateObj = new Date();
@@ -61,19 +61,20 @@ ctx.fillStyle = "#ffffff";
 let dates = datess.length > 11 ? datess.substring(0, 11) + " " : datess;
 ctx.font = "95px NVM";
 ctx.textAlign = 'left';
-ctx.fillText(dates, 40, 1350);
+ctx.fillText(dates, 20, 700);
+
 ctx.save();
 ctx.beginPath();
 ctx.lineWidth = 5;
 ctx.strokeStyle = "#000";
-ctx.arc(453, 892, 340, 0, Math.PI * 2, true);
+ctx.arc(232.5, 460, 175, 0, Math.PI * 2, true);
 ctx.stroke();
 ctx.closePath();
 ctx.clip();
 
 
-let avatar = await Canvas.loadImage(shorts(this.avatar));
-ctx.drawImage(avatar, 112, 550, 681, 681);
+let avatar = await Canvas.loadImage(this.avatar);
+ctx.drawImage(avatar, 57, 285, 350, 350);
 ctx.restore();
 
 return canvas;   
