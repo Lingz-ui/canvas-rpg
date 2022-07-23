@@ -59,7 +59,7 @@ var newdate = month + "/" + day + "/" + year;
 let datess = newdate;
 ctx.fillStyle = "#ffffff";
 let dates = datess.length > 11 ? datess.substring(0, 11) + " " : datess;
-ctx.font = "95px NVM";
+ctx.font = "45px NVM";
 ctx.textAlign = 'left';
 ctx.fillText(dates, 20, 700);
 
